@@ -3,25 +3,22 @@ import 'package:speedy_book/model/movie_model.dart';
 import 'package:speedy_book/view/movie_details.dart';
 
 class MoviesHomePage extends StatelessWidget {
-  MoviesHomePage({super.key});
-
-  final scaffol = GlobalKey<ScaffoldState>();
+  const MoviesHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: scaffol,
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
-        leading: GestureDetector(
-          child: const Icon(
-            Icons.drafts,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_back,
             color: Colors.white,
           ),
-          onTap: () {
-            scaffol.currentState?.openDrawer();
-          },
         ),
         title: const Text(
           "Currently Showing",
@@ -32,87 +29,6 @@ class MoviesHomePage extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-      ),
-      drawer: Drawer(
-        surfaceTintColor: Colors.white,
-        backgroundColor: Colors.black,
-        child: ListView(
-          children: <Widget>[
-            const UserAccountsDrawerHeader(
-              accountName: Text(
-                "Tony Stark",
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
-                ),
-              ),
-              accountEmail: Text(
-                "tony@email.com",
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
-                ),
-              ),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage("assets/tony.jpg"),
-              ),
-            ),
-            ListTile(
-              title: const Text(
-                "Home",
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
-                ),
-              ),
-              onTap: () {
-                // handle edit profile action
-              },
-            ),
-            ListTile(
-              title: const Text(
-                "My Tickets",
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
-                ),
-              ),
-              onTap: () {
-                // handle home action
-              },
-            ),
-            ListTile(
-              title: const Text(
-                "Edit Profile",
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.white,
-                ),
-              ),
-              onTap: () {
-                // handle my tickets action
-              },
-            ),
-            ListTile(
-              title: const Text(
-                "Logout",
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.red,
-                ),
-              ),
-              onTap: () {
-                // handle logout action
-              },
-            ),
-          ],
-        ),
       ),
       body: Column(
         children: [

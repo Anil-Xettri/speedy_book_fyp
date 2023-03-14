@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:speedy_book/view/movie_homepage.dart';
 import 'package:speedy_book/view/login.dart';
+import 'package:speedy_book/view/showtimes.dart';
 import 'package:speedy_book/view/signup.dart';
+import 'package:speedy_book/view/theaters.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,14 +33,15 @@ class MyApp extends StatelessWidget {
         }),
       ),
 
-      home: const LoginPage(),
-      //home: const MovieShowtimesPage(),
+      //home: const LoginPage(),
+      home: MovieTheaters(),
+     // home: MovieShowtimesPage(),
       //home: const MoviesHomePage(),
 
       routes: {
         '/loginpage': (_) => const LoginPage(),
         '/signup': (_) => const SignupPage(),
-        '/homepage': (_) => MoviesHomePage(),
+        '/homepage': (_) => const MoviesHomePage(),
       },
     );
   }

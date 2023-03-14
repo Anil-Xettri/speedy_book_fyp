@@ -19,14 +19,6 @@ class LoginController extends GetxController {
       SaveUser saveUser = SaveUser();
       saveUser.storeId(response.data['profile']['id']);
       navigator.pushNamedAndRemoveUntil('/homepage', (a) => false);
-
-
-      
-
-
-
-
-
     }
   }
 }
