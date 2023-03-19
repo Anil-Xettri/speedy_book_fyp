@@ -1,5 +1,3 @@
-import 'package:speedy_book/view/showtimes.dart';
-
 class MovieModel {
   final int id;
   final String name;

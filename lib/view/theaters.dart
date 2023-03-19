@@ -187,7 +187,7 @@ class MovieTheaters extends StatelessWidget {
                                     style: const TextStyle(
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 25,
+                                      fontSize: 23,
                                     ),
                                   ),
                                   const SizedBox(height: 8.0),
@@ -195,7 +195,24 @@ class MovieTheaters extends StatelessWidget {
                                     theater.location,
                                     style: const TextStyle(
                                       color: Colors.white,
-                                      fontSize: 23,
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8.0),
+                                  Text(
+                                    theater.contact,
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 8.0),
+                                  Text(
+                                    theater.email,
+                                    style: const TextStyle(
+                                      fontStyle: FontStyle.italic,
+                                      color: Colors.blue,
+                                      fontSize: 20,
                                     ),
                                   ),
                                 ],
